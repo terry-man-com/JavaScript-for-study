@@ -1,8 +1,11 @@
-// ダークモード関数
-const changeDarkMode = (obj) => {
-  if(new Date().getHours() > obj.time){
-    document.body.style.backgroundColor = obj.color;
-  }
+// コールバック関数
+const foo = (callback) => {
+  console.log("work A");
+  callback();
 };
 
-changeDarkMode({time: -1, color: "#333"});
+const bar = () => {
+  console.log("work B");
+};
+
+foo(bar);
