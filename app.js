@@ -13,7 +13,7 @@ foo(bar);
 // 戻り値
 const changeDarkMode = (time) => {
   if(new Date().getHours() > time){
-    document.body.style.backgroundColor = "#333";
+    document.body.style.backgroundColor = "#fff";
   }
 };
 const getSeason = () => {
@@ -97,3 +97,16 @@ console.log(omitPostTitle("The Third Door"));
 // メソッドチェーン
 const name = ["Yamada", "Taro"];
 console.log(name.join(" ").toUpperCase());
+
+// Web API
+//  window.addEventListener("load", () => {
+//   alert("Hello");
+//  });
+// documentオブジェクトの主要なプロパティやメソッド
+//使用例
+const $post = document.createElement("article");
+$post.setAttribute("class", "post");
+$post.innerText = "明日は筋トレをしに行こう。";
+
+const $timeline = document.getElementById("timeline");
+$timeline.appendChild($post);

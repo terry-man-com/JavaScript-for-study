@@ -69,3 +69,55 @@ console.log(snsUser3.followers[2]);　// 配列呼び出し
 snsUser3.actions.like(); // likeメソッドを実行
 ```
 </details>
+
+### ブラウザ-API
+- ブラウザーAPIとはWebブラウザ上でJavaScriptを実行し、Webページを操作することを可能とするAPI。
+```
+window.innerWidth; // 現在のウィンドウの横幅を取得
+window.innerHeight; // 現在のウィンドウの縦幅を取得
+```
+
+```javascript:具体例
+
+if(window.innerWidth > window.innerHeight){
+  //PC用の処理
+} else {
+  //スマホ用の処理
+}
+```
+### documentのオブジェクト・メソッド
+- 要素追加方法　TIPS
+1. insertBefore
+- 指定した要素の前に新しい要素を挿入する
+```
+parentElement.insertBefore(newElement, referenceElement);
+```
+1. insertAdjacentHTML
+- 指定した位置にHTML文字列を挿入する。
+```
+element.insertAdjacentHTML('position', 'HTMLString');
+```
+- positionの値
+ - 'beforebegin': 要素の直前
+ - 'afterbegin': 要素の最初の子要素の前
+ - 'beforeend': 要素の最後の子要素の後（appendChildに近い）
+ - 'afterend': 要素の直後
+
+使用例
+```
+const $timeline = document.getElementById('timeline');
+
+// timelineの最後に新しい投稿を追加
+$timeline.insertAdjacentHTML('beforeend', `
+  <article class="post">
+    新しい投稿です！
+  </article>
+`);
+
+// timelineの最初に新しい投稿を追加
+$timeline.insertAdjacentHTML('afterbegin', `
+  <article class="post">
+    一番新しい投稿です！
+  </article>
+`);
+```
