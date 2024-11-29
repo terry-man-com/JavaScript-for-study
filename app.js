@@ -72,3 +72,28 @@ const snsUser3 = {
 };
 console.log(snsUser3.settings.premium);
 console.log(snsUser3.followers[2]);
+// 標準組み込み関数・オブジェクト
+console.log(Math.PI);
+// 標準組み込み関数のユースケース
+const challengeLottery = () => {
+  const result = Math.random();
+  if (result < 0.5) {
+    return "あたり";
+  } else {
+    return "ハズレ";
+  }
+};
+console.log(challengeLottery());
+
+const omitPostTitle = (title) => {
+  if(title.length > 20){
+    return title.slice(0, 20) + "...";
+  } else {
+    return title;
+  }
+};
+console.log(omitPostTitle("JavaScriptを学ぼう。あああああああああああああああああああああああ〜！"));
+console.log(omitPostTitle("The Third Door"));
+// メソッドチェーン
+const name = ["Yamada", "Taro"];
+console.log(name.join(" ").toUpperCase());
