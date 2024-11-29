@@ -43,3 +43,27 @@ if (season == "autumn"){　// getSeasonの結果を条件式にして分岐処�
   changeDarkMode(20);
 };
 ```
+</details>
+<details><summary>オブジェクト</summary>
+
+- データをまとめて管理するための箱のようなもの
+```
+const snsUser3 = {
+  id: 1,
+  username: "taro",
+  followers: ["Yamada","Suzuki","Tanaka"],
+  following: ["Yamada", "Suzuki"],
+  posts: null,
+  settings: { // オブジェクト内のオブジェクト
+    premium: true,
+    darkMode: false,
+  }
+  // actions: {
+  //   like: () => {...},
+  //   post: () => {...},
+  // }
+};
+console.log(snsUser3.username); // 呼び出し
+console.log(snsUser3.settings.premium); // オブジェクト呼び出し
+console.log(snsUser3.followers[2]);　// 配列呼び出し
+snsUser3.actions.like(); // likeメソッドを実行
