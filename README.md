@@ -121,3 +121,23 @@ $timeline.insertAdjacentHTML('afterbegin', `
   </article>
 `);
 ```
+### 中間メモ（本１週で読んで理解できていないこと。）
+- Javascriptの導入
+  -　メタ構成変数：foo,bar(サンプルコードを記載する際に書かれる変数)
+- 変数と定数と宣言
+  - constで宣言した変数の値を上書きしようとするとエラーが起こり、処理が進まない。下記の場合は、`console.log(foo2)`で`1`が出力されるわけではない。
+  ```
+  const foo2 = 1;
+  const = 2;
+  console.log(foo2);
+  ```
+- データ型について
+  - データ型の表
+  | データ型 | 英語表記 | 説明 | 例 |
+  | ---- | ---- | ---- | ---- |
+  | 数値 | Number | 数字を表す | 1, 2, 3, 4, 5 |
+  | 文字列 | String | 文字を表す | "Hello", "World" |
+  | 論理値 | Boolean | 論理値を表す | true, false |
+  | null | null | 値が存在しないことを表す | null |
+  | 未定義 | undefined | 値が未定義であることを表す | undefined |
+  | オブジェクト | Object | キーと値を対で格納できるまとまり | {foo: 1, bar: 2} |
