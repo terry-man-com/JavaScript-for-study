@@ -160,6 +160,7 @@ $timeline.insertAdjacentHTML('afterbegin', `
   | Math | random() | 0以上1未満のランダムな数値を返す | Math.random() | 0.123132 |
 
   - 標準メソッド
+  
   | メソッド名 | 説明 | 例 | 結果 |
   | ---- | ---- | ---- | ---- |
   | join(区切り文字) | 配列の要素を区切り文字で結合 | ["Hi", "Tom"].join("") | "HiTom"|
