@@ -167,5 +167,10 @@ const asyncfunction = async () => {
   await baz();
 }
 
-// デバック方法
+// 標準組み込みメソッド
+const replace = "Hello".replaceAll("l", "a"); // 文字列検索し、全て置換
+const reverseArray = [1, 2, 3]; // 配列の要素を逆順に並び替える
+console.log(reverseArray.reverse());
+
+
 

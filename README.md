@@ -160,9 +160,11 @@ $timeline.insertAdjacentHTML('afterbegin', `
   | Math | random() | 0以上1未満のランダムな数値を返す | Math.random() | 0.123132 |
 
   - 標準メソッド
-  
+
   | メソッド名 | 説明 | 例 | 結果 |
   | ---- | ---- | ---- | ---- |
   | join(区切り文字) | 配列の要素を区切り文字で結合 | ["Hi", "Tom"].join("") | "HiTom"|
   | split(区切り文字) | 文字列を区切り文字で分割する | "Hi Tom".split(" ") | ["Hi" "Tom"]|
   | slice(開始位置, 終了位置) | 指定した位置の要素を取得する | "HiTom".slice(0, 2) | "Hi"|
+  | replaceAll(検索文字列, 置換文字列) | 検索文字列を全て置換文字列に置き換える | "Hello".replaceAll("l", "a"); | "Heaao"|
+  | reverse(配列) | 配列の要素を逆順に並び替える | [1, 2, 3].reverse() | [3, 2, 1] |
