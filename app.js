@@ -1,4 +1,13 @@
+// ループ分
+const questions = [
+  "XXXXX",
+  "YYYYY",
+  "ZZZZZ"
+];
 
+for (i = 0; i < questions.length; i++){
+  console.log(questions[i]);
+}
 // コールバック関数
 const foo = (callback) => {
   console.log("work A");

@@ -128,12 +128,12 @@ $timeline.insertAdjacentHTML('afterbegin', `
   - constで宣言した変数の値を上書きしようとするとエラーが起こり、処理が進まない。下記の場合は、`console.log(foo2)`で`1`が出力されるわけではない。
   ```
   const foo2 = 1;
-  const = 2;
+  const = 2; // エラー発生
   console.log(foo2);
   ```
 - データ型について
   - データ型の表
-  
+
   | データ型 | 英語表記 | 説明 | 例 |
   | ---- | ---- | ---- | ---- |
   | 数値 | Number | 数字を表す | 1, 2, 3, 4, 5 |
@@ -142,3 +142,26 @@ $timeline.insertAdjacentHTML('afterbegin', `
   | null | null | 値が存在しないことを表す | null |
   | 未定義 | undefined | 値が未定義であることを表す | undefined |
   | オブジェクト | Object | キーと値を対で格納できるまとまり | {foo: 1, bar: 2} |
+- 条件文（if文）
+  - `=== true`や`=== false`は下記のコードのように省略できる。（変数はisLogin）
+  ```
+  if(isLogin){.....}; // isLoginがtrueの場合、を意味する
+  if(!isLogin){.....}; // isLoginがfalseの場合、を意味する
+  ```
+- 標準組み込み関数と標準組み込みオブジェクト
+  - Math：数学的な計算を行うためのプロパティやメソッドを所持
+
+  | オブジェクト名 | メソッドまたは<br>プロパティ名 | 説明 | 例 | 結果 |
+  | ---- | ---- | ---- | ---- |---- |
+  | Math | PI | 円周率を表す | Math.PI | 3.141592|
+  | Math | ceil(数値) | 小数点以下を切り上げ | Math.ceil(5.3) | 6 |
+  | Math | floor(数値) | 小数点以下を切り下げ | Math.floor(5.3) | 5 |
+  | Math | round(数値) | 小数点以下を四捨五入 | Math.round(5.3) | 5 |
+  | Math | random() | 0以上1未満のランダムな数値を返す | Math.random() | 0.123132 |
+
+  - 標準メソッド
+  | メソッド名 | 説明 | 例 | 結果 |
+  | ---- | ---- | ---- | ---- |---- |
+  | join(区切り文字) | 配列の要素を区切り文字で結合 | ["Hi", "Tom"].join("") | "HiTom"|
+  | split(区切り文字) | 文字列を区切り文字で分割する | "Hi Tom".split(" ") | ["Hi" "Tom"]|
+  | slice(開始位置, 終了位置) | 指定した位置の要素を取得する | "HiTom".slice(0, 2) | "Hi"|
