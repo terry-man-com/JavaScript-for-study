@@ -168,3 +168,7 @@ $timeline.insertAdjacentHTML('afterbegin', `
   | slice(開始位置, 終了位置) | 指定した位置の要素を取得する | "HiTom".slice(0, 2) | "Hi"|
   | replaceAll(検索文字列, 置換文字列) | 検索文字列を全て置換文字列に置き換える | "Hello".replaceAll("l", "a"); | "Heaao"|
   | reverse(配列) | 配列の要素を逆順に並び替える | [1, 2, 3].reverse() | [3, 2, 1] |
+  | shift(配列) | 配列の先頭の要素を削除する。 | [1, 2, 3].shift() | [2, 3]※ 使用例の操作を行った場合は削除された数、１が出力される。 |
+  | indexOf(検索文字列) | 値の中で検索文字列が最初に出現する位置を返す | "Hello".indexOf("o") | 4 |
+  | toUpperCase() | 対象の文字列を大文字にする。 | "hello".toUpperCase() | HELLO |
+  | toLowerCase() | 対象の文字列を小文字にする。 | "HELLO".toLowerCase() | hello |

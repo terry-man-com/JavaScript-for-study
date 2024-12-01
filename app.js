@@ -171,6 +171,16 @@ const asyncfunction = async () => {
 const replace = "Hello".replaceAll("l", "a"); // 文字列検索し、全て置換
 const reverseArray = [1, 2, 3]; // 配列の要素を逆順に並び替える
 console.log(reverseArray.reverse());
+// shift(配列の先頭の要素を削除する)
+const shiftArray = [1, 2, 3];
+shiftArray.shift();
+console.log(shiftArray);
 
+const num = 0;
+console.log(num.toString());
 
+console.log("Hello".indexOf("")); //文字列検索
 
+console.log("hello".toUpperCase()); //値を大文字に変換する。
+
+console.log("HeLLo".toLowerCase()); //値を小文字に変換する。
