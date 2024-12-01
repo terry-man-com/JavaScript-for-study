@@ -1,5 +1,5 @@
 # JavaScript-for-study
-JavaScriptの学習用
+JavaScriptの学習用(自分用のメモです。)
 ### 関数
 <details><summary>コールバック関数</summary>
 
@@ -172,3 +172,22 @@ $timeline.insertAdjacentHTML('afterbegin', `
   | indexOf(検索文字列) | 値の中で検索文字列が最初に出現する位置を返す | "Hello".indexOf("o") | 4 |
   | toUpperCase() | 対象の文字列を大文字にする。 | "hello".toUpperCase() | HELLO |
   | toLowerCase() | 対象の文字列を小文字にする。 | "HELLO".toLowerCase() | hello |
+
+  - ブラウザーAPI
+    - location：URLに関するプロパティを複数有しているためURLの操作を可能。リダイレクトの設定などができる。
+    ```
+    window.location // URLの情報を持つオブジェクトを取得
+    ```
+    - navigation：ブラウザの情報（ChromeやEdgeなのかなど）に関する複数のプロパティを有しているため、ユーザーがどのブラウザを使用しているかなどを特定できる。
+    ```
+    window.navigation //ブラウザの情報を持つオブジェクトを取得
+  
+  - documentオブジェクト：WebページのHTML、CSSの情報を持つ
+  - documentオブジェクトが持つ主要なプロパティやメソッドについて
+    - 使用方：HTML要素に何か操作を加えたい場合は,まず<span style="color: red; ">getElementById()やgetElementsByClassName()を使用し、対象の要素を取得する必要</span>がある。取得後にHTMLを操作するメソッドやプロパティが使用可能となる。
+  - parentElement, nextElementSibling, previousElementSiblingで詰まった部分
+  ```
+  const $previousTest = document.getElementsByClassName("bar")[0];// 配列を取得するのでインデックス失念注意
+  const nextElement = $previousTest.nextElementSibling;//処理後の変数の格納を忘れない。
+  nextElement.innerText = "Hello World";
+  ```

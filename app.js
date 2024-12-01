@@ -114,6 +114,20 @@ console.log(name.join(" ").toUpperCase());
 //  });
 // documentオブジェクトの主要なプロパティやメソッド
 //使用例
+//getElementById
+const $fooTest1 = document.getElementById("foo");
+$fooTest1.innerText = "Hello World!";
+//getElementsByClassName
+// const $fooTest2 = document.getElementsByClassName("foo");
+// $fooTest2[0].innerText = "Hello World!!";
+// $fooTest2[1].innerText = "hello world!!!!!";
+// $fooTest2[2].innerText = "HELLO WORLD!!";
+
+// parentElement, nextElementSibling, previousElementSiblingの使用例
+const $previousTest = document.getElementsByClassName("bar")[0];
+const nextElement = $previousTest.nextElementSibling;
+nextElement.innerText = "Hello World";
+
 const $post = document.createElement("article");
 $post.setAttribute("class", "post");
 $post.innerText = "明日は筋トレをしに行こう。";
