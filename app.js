@@ -172,14 +172,50 @@ foo1().then((resolve) => {
   console.log(resolve);
 }).catch((reject) => {
   console.log(reject);
+}).finally (() => {
+  console.log("リクエスト処理が完了しました。");
 });
 
 // await,async
 const asyncfunction = async () => {
-  await foo();
-  await bar();
-  await baz();
-}
+  try {
+      await foo();
+      await bar();
+      await baz();
+      console.log("foo,bar,bazが成功");
+  } catch (error) {
+      console.log("foo,bar,bazのどれかが失敗:" + error);
+  } finally {
+      console.log("リクエストが完了しました。");
+  }
+};
+
+// fetch()：サーバーサイドとの通信処理
+fetch("https://example.com");
+
+// then(),catch()
+fetch("https://example.com")
+  .then((response) => {
+      console.log("リクエストが成功しました。レスポンス内容は「" + response + "」です。");
+  })
+  .catch((error) => {
+      console.log("リクエストが失敗しました。エラー内容は「" + error + "」です。");
+  })
+  .finally (() => {
+      console.log("リクエスト処理が完了しました。");
+  });
+// await, async
+const fooAsyncFunction = async () => {
+  try {
+      await fetch("...");
+      await fetch("...");
+      await fetch("...");
+      console.log("全ての処理が完了しました。");
+  } catch (error) {
+      console.log("エラーが発生しました。エラー内容は" + error.massage + "」です。");
+  }
+};
+fooAsyncFunction();
 
 // 標準組み込みメソッド
 const replace = "Hello".replaceAll("l", "a"); // 文字列検索し、全て置換
@@ -198,3 +234,19 @@ console.log("Hello".indexOf("")); //文字列検索
 console.log("hello".toUpperCase()); //値を大文字に変換する。
 
 console.log("HeLLo".toLowerCase()); //値を小文字に変換する。
+
+// 非同期処理
+const isTrue = true;
+const fooFunction = () =>{
+  setTimeout(() => {
+        console.log("work A");}, 1000);
+};
+fooFunction();
+
+for(let i = 0; i < 3; i++) {
+  console.log("workB" + i);
+}
+
+if (isTrue) {
+  console.log("workC");
+}
